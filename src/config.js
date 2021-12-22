@@ -108,6 +108,13 @@ export const contractAbi = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "fundsRaised",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "_address", type: "address" }],
     name: "getBNBInvestment",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
@@ -268,5 +275,5 @@ export const contractAbi = [
     type: "function",
   },
 ];
-export const contractAddress = "0x0454bA628d5B308d187b2A7b3B25d62D3A0199dB";
+export const contractAddress = "0xda2CaBf241802F5b7Ca42b19a7E0A660AB00bb23";
 // export const contractAddress = "0xb05c7D0E023C8Bb7C824A7Eb531749AE61Dd95e4";
