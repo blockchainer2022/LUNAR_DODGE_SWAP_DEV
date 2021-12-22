@@ -201,9 +201,12 @@ function App() {
       const tokenBalance = await contract.methods
         .getUserTokenBalance()
         .call({ from: account });
-
-      setUserTokenBalance(tokenBalance / 100);
-      console.log("User Token Balance:", tokenBalance);
+      const tokenBalance_converted = window.web3.utils.fromWei(
+        tokenBalance,
+        "ether"
+      );
+      setUserTokenBalance(tokenBalance_converted);
+      // console.log("User Token Balance:", tokenBalance);
     } else {
       toast("Please connect to main net", {
         type: "error",
