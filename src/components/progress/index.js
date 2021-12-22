@@ -6,25 +6,26 @@ import "./style.css";
 const Index = React.memo(
   ({
     totalSupply = 0,
+    fundsRaised,
     tokenSold = 0,
     account = false,
     totalSupplyFormated,
     tokenSoldFormated,
   }) => {
-    const total = new Intl.NumberFormat("en-GB", {
-      notation: "compact",
-      compactDisplay: "short",
-    }).format(totalSupply);
+    // const total = new Intl.NumberFormat("en-GB", {
+    //   notation: "compact",
+    //   compactDisplay: "short",
+    // }).format(totalSupply);
 
-    const total2 = new Intl.NumberFormat("en-GB", {
-      notation: "compact",
-      compactDisplay: "short",
-    }).format(tokenSold);
+    // const total2 = new Intl.NumberFormat("en-GB", {
+    //   notation: "compact",
+    //   compactDisplay: "short",
+    // }).format(tokenSold);
     // console.log("TOTALSUPPLE", totalSupply / 100);
-    console.log(totalSupply);
+    // console.log(totalSupply);
     // const value = (Number(tokenSold) * 100) / Number(totalSupply);
 
-    const progress = (Number(tokenSold) / Number(totalSupply)) * 100;
+    const progress = (Number(fundsRaised) / Number(totalSupply)) * 100;
     const width =
       progress > 0
         ? Math.floor(progress) + 1 >= 100
@@ -70,13 +71,13 @@ const Index = React.memo(
         </div>
         <div className="flex mt-1 justify-between items-center">
           <span>
-            Total Sold: <span>0</span>
+            Total Sold: <span>{tokenSoldFormated}</span>
           </span>
           <span>
             SoftCap: <span>125BNB</span>
           </span>
           <span>
-            HardCap: <span>250BNB</span>
+            HardCap: <span>{totalSupply}BNB</span>
           </span>
         </div>
       </div>

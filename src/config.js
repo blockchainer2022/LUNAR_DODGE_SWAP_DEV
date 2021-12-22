@@ -137,6 +137,13 @@ export const contractAbi = [
   },
   {
     inputs: [],
+    name: "getPancakePairAddress",
+    outputs: [{ internalType: "address", name: "_pair", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "getUserTokenBalance",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
@@ -219,13 +226,6 @@ export const contractAbi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "_tokenSold", type: "uint256" }],
-    name: "setTokenSold",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [],
     name: "startTime",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
@@ -275,5 +275,5 @@ export const contractAbi = [
     type: "function",
   },
 ];
-export const contractAddress = "0xda2CaBf241802F5b7Ca42b19a7E0A660AB00bb23";
+export const contractAddress = "0xD29c272d46a5ccfFAFB4F4E0e9f7bE0B2Dfc03F5";
 // export const contractAddress = "0xb05c7D0E023C8Bb7C824A7Eb531749AE61Dd95e4";
